@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 import LoginImg from "../../assets/undraw_Login_re_4vu2.svg";
 import api from "../../services/api";
 
+import { Redirect } from "react-router";
 
 export default function LoginPage() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
